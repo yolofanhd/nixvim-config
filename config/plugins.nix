@@ -3,17 +3,17 @@
     # Buffer bar
     bufferline = {
       enable = true;
-      # settings.options = {
-      #   diagnostics = "nvim_lsp";
-      #   offsets = [
-      #     {
-      #       filetype = "neo-tree";
-      #       text = "File Explorer";
-      #       text_align = "left";
-      #       separator = true;
-      #     }
-      #   ];
-      # };
+      settings.options = {
+        diagnostics = "nvim_lsp";
+        offsets = [
+          {
+            filetype = "neo-tree";
+            text = "File Explorer";
+            text_align = "left";
+            separator = true;
+          }
+        ];
+      };
     };
 
     # Status bar
@@ -65,11 +65,11 @@
           };
           black = {
             enable = true;
-            # settings = ''
-            #   {
-            #     extra_args = { "--fast" },
-            #   }
-            # '';
+            settings = ''
+              {
+                extra_args = { "--fast" },
+              }
+            '';
           };
         };
         completion = {
@@ -161,10 +161,10 @@
     # Code snippets
     luasnip = {
       enable = true;
-      #extraConfig = {
-      #  enable_autosnippets = true;
-      #  store_selection_keys = "<Tab>";
-      #};
+      settings = {
+        enable_autosnippets = true;
+        store_selection_keys = "<Tab>";
+      };
     };
 
     # Easily toggle comments
@@ -232,7 +232,7 @@
     # Todo comments
     todo-comments = {
       enable = true;
-      colors = {
+      settings.colors = {
         error = [ "DiagnosticError" "ErrorMsg" "#DC2626" ];
         warning = [ "DiagnosticWarn" "WarningMsg" "#FBBF24" ];
         info = [ "DiagnosticInfo" "#2563EB" ];
