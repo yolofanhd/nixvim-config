@@ -1,4 +1,4 @@
-{self, ...}: {
+{
   globalOpts = {
     # Line numbers
     number = true;
@@ -15,7 +15,7 @@
     termguicolors = true;
     encoding = "utf8";
     fileencoding = "utf8";
-    
+
     hlsearch = false;
     incsearch = true;
 
@@ -70,7 +70,7 @@
     }
     {
       event = [ "VimEnter" ];
-      command = "Neotree";
+      command = "NvimTreeClose | Startify | NvimTreeOpen";
     }
   ];
 
