@@ -14,8 +14,8 @@ jobs:
         with:
           ref: main
 
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v3
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: stable
