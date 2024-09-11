@@ -35,7 +35,6 @@
     smartindent = true;
     tabstop = 4;
     softtabstop = 2;
-    showtabline = 2;
     shiftwidth = 4;
     expandtab = true;
     smarttab = true;
