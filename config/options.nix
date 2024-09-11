@@ -17,7 +17,7 @@
     encoding = "utf8";
     fileencoding = "utf8";
 
-    hlsearch = false;
+    hlsearch = true;
     incsearch = true;
 
     splitright = true;
@@ -32,6 +32,7 @@
     foldenable = false;
 
     # Tab defaults (might get overwritten by an LSP server)
+    breakindent = true; # Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
     smartindent = true;
     tabstop = 4;
     softtabstop = 2;
@@ -56,5 +57,11 @@
 
     # Remove command line unless needed
     cmdheight = 0;
+
+    # Place a column line
+    colorcolumn = "80";
+
+    # Decrease updatetime
+    updatetime = 50; # faster completion (4000ms default)
   };
 }
