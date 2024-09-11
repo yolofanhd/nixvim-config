@@ -47,17 +47,6 @@
       mode = "n";
       key = "fh";
     }
-    {
-      action = "<cmd>Telescope man_pages<CR>";
-      mode = "n";
-      key = "fm";
-    }
-
-    {
-      action = "<cmd>Telescope man_pages<CR>";
-      mode = "n";
-      key = "fm";
-    }
 
     # Floatterm toggle
     {
