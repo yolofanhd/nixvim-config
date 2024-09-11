@@ -14,6 +14,7 @@ in
     (prefix + /markdown-preview.nix)
     (prefix + /none-ls.nix)
     (prefix + /notify.nix)
+    (prefix + /nvim-tree.nix)
     (prefix + /startup.nix)
     (prefix + /telescope.nix)
     (prefix + /todo-comments.nix)
