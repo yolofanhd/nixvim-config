@@ -1,11 +1,10 @@
 {
   imports = [
+    ./auto_cmd.nix
     ./plugins.nix
     ./mappings.nix
     ./options.nix
   ];
-
-  clipboard.providers.wl-copy.enable = true;
 
   colorschemes.gruvbox = {
     enable = true;
