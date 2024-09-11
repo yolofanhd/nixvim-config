@@ -11,14 +11,5 @@
         test = [ "Identifier" "#FF00FF" ];
       };
     };
-
-    # File tree
-    nvim-tree = {
-      enable = true;
-      openOnSetup = true;
-      openOnSetupFile = true;
-      autoReloadOnWrite = true;
-      diagnostics.enable = true;
-    };
   };
 }
