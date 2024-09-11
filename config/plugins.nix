@@ -1,21 +1,5 @@
 { pkgs, ... }: {
   plugins = {
-    # Buffer bar
-    bufferline = {
-      enable = true;
-      settings.options = {
-        diagnostics = "nvim_lsp";
-        offsets = [
-          {
-            filetype = "neo-tree";
-            text = "File Explorer";
-            text_align = "left";
-            separator = true;
-          }
-        ];
-      };
-    };
-
     # Status bar
     lualine = {
       enable = true;
@@ -28,11 +12,6 @@
 
     # Auto-tagging
     ts-autotag = {
-      enable = true;
-    };
-
-    # Autopairs
-    nvim-autopairs = {
       enable = true;
     };
 
@@ -86,7 +65,12 @@
       fps = 60;
       render = "default";
       timeout = 500;
-      topDown = true;
+      topDown = false;
+    };
+
+    # Autopairs
+    nvim-autopairs = {
+      enable = true;
     };
 
     # Persistence
@@ -189,6 +173,17 @@
     neogen = {
       enable = true;
     };
+    neotest = {
+      enable = true;
+    };
+
+    git-conflict = {
+      enable = true;
+    };
+
+    flash = {
+      enable = true;
+    };
 
     # Git signs in code
     gitsigns = {
@@ -206,12 +201,8 @@
     telescope = {
       enable = true;
       extensions = {
-        fzf-native = {
-          enable = true;
-        };
-        file-browser = {
-          enable = true;
-        };
+        file-browser.enable = true;
+        fzf-native.enable = true;
       };
       settings = {
         defaults = {
@@ -243,29 +234,11 @@
     };
 
     # File tree
-    neo-tree = {
+    nvim-tree = {
       enable = true;
-      enableDiagnostics = true;
-      enableGitStatus = true;
-      enableModifiedMarkers = true;
-      enableRefreshOnWrite = true;
-      closeIfLastWindow = false;
-      popupBorderStyle = "rounded"; # Type: null or one of “NC”, “double”, “none”, “rounded”, “shadow”, “single”, “solid” or raw lua code
-      buffers = {
-        bindToCwd = false;
-        followCurrentFile = {
-          enabled = true;
-        };
-      };
-      window = {
-        position = "left";
-        width = 40;
-        height = 15;
-        autoExpandWidth = false;
-        mappings = {
-          "<space>" = "none";
-        };
-      };
+      openOnSetup = true;
+      autoReloadOnWrite = true;
+      diagnostics.enable = true;
     };
 
     # Nix expressions in Neovim
@@ -344,30 +317,31 @@
       enable = true;
     };
 
-    rust-tools = {
-      enable = true;
-      server = {
-        procMacro = {
-          enable = true;
-          ignored = {
-            leptos_macro = [ "server" "component" ];
-          };
-        };
-      };
-    };
     crates-nvim = {
       enable = true;
     };
 
-    # Dashboard
-    alpha = {
+    rustaceanvim = {
       enable = true;
-      theme = "dashboard";
-      iconsEnabled = true;
     };
 
     which-key = {
       enable = true;
+    };
+
+    startify = {
+      enable = true;
+      settings = {
+        change_to_dir = false;
+        custom_header = [
+          "    _  _  ____    __ _  __  _  _  _  _  __  _  _   "
+          "   ( \\/ )(  __)  (  ( \\(  )( \\/ )/ )( \\(  )( \\/ )  "
+          "    )  /  ) _)   /    / )(  )  ( \\ \\/ / )( / \\/ \\  "
+          "   (__/  (__)    \\_)__)(__)(_/\\_) \\__/ (__)\\_)(_/  "
+          ""
+        ];
+        fortune_use_unicode = true;
+      };
     };
 
     cmp = {
@@ -425,14 +399,6 @@
 
     undotree = {
       enable = true;
-    };
-  };
-
-  colorschemes.gruvbox = {
-    enable = true;
-    settings = {
-      transparent_mode = true;
-      terima_colors = true;
     };
   };
 
