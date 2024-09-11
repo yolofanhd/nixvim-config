@@ -1,5 +1,6 @@
 {
-  globalOpts = {
+  clipboard.providers.wl-copy.enable = true;
+  opts = {
     # Line numbers
     number = true;
     relativenumber = true;
@@ -9,8 +10,9 @@
 
     swapfile = false;
     backup = false;
-    undodir = "~/.vim-undodir";
     syntax = "OFF";
+
+    undofile = true;
 
     termguicolors = true;
     encoding = "utf8";
@@ -26,11 +28,15 @@
     ignorecase = true;
     smartcase = true;
 
+    foldmethod = "manual";
+    foldenable = false;
+
     # Tab defaults (might get overwritten by an LSP server)
     smartindent = true;
     tabstop = 4;
+    softtabstop = 2;
+    showtabline = 2;
     shiftwidth = 4;
-    softtabstop = 0;
     expandtab = true;
     smarttab = true;
 
@@ -48,6 +54,8 @@
 
     # Start scrolling when the cursor is X lines away from the top/bottom
     scrolloff = 4;
+
+    cmdheight = 0;
   };
 
   userCommands = {
@@ -62,17 +70,6 @@
   };
 
   globals.mapleader = "`";
-
-  autoCmd = [
-    {
-      event = [ "BufEnter" "BufWinEnter" ];
-      command = "set nofoldenable";
-    }
-    {
-      event = [ "VimEnter" ];
-      command = "NvimTreeClose | Startify | NvimTreeOpen";
-    }
-  ];
 
   highlight = {
     Comment = {
