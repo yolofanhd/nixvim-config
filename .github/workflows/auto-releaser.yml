@@ -18,7 +18,8 @@ jobs:
         uses: peter-evans/create-pull-request@v7.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          title: Release to stable
+          body: This is an automated pull request from the main branch to the stable branch.
+          commit-message: update changelog
+          branch: release-stable
           base: stable
-          head: main
-          title: "Release to stable"
-          body: "This is an automated pull request from the main branch to the stable branch."
