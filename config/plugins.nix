@@ -327,6 +327,11 @@
             };
           };
         };
+
+        # Golang
+        gopls = {
+          enable = true;
+        };
       };
     };
     lsp-format = {
