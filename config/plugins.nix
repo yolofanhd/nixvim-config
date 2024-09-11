@@ -40,6 +40,7 @@ in
     rustaceanvim.enable = true;
     which-key.enable = true;
     undotree.enable = true;
+    diffview.enable = true;
   };
 
   # Plugins not contained within nixvim
