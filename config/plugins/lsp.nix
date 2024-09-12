@@ -25,9 +25,11 @@
     # Extra configuration for lsp servers
     lsp.servers = {
       lua-ls = {
+        enable = true;
         settings.telemetry.enable = false;
       };
       rust-analyzer = {
+        enable = true;
         installRustc = true;
         installCargo = true;
         settings = {
