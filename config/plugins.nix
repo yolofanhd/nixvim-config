@@ -36,7 +36,7 @@ in
     nix.enable = true;
     nvim-autopairs.enable = true;
     persistence.enable = true;
-    rustaceanvim.enable = true;
+    # rustaceanvim.enable = true;
     treesitter.enable = true;
     trouble.enable = true;
     ts-autotag.enable = true;
