@@ -28,22 +28,6 @@
         enable = true;
         settings.telemetry.enable = false;
       };
-      rust-analyzer = {
-        enable = true;
-        installRustc = true;
-        installCargo = true;
-        settings = {
-          cargo = {
-            features = "all";
-          };
-          procMacro = {
-            enable = true;
-            ignored = {
-              leptos_macro = [ "server" "component" ];
-            };
-          };
-        };
-      };
     };
   };
 }
