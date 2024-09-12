@@ -14,11 +14,9 @@
         dockerls.enable = true; # Docker
         gopls.enable = true; # Go
         html.enable = true; # HTML
-        lua-ls.enable = true; # Lua
         marksman.enable = true; # Markdown
         nil-ls.enable = true; # Nix
         pyright.enable = true; # Python
-        rust-analyzer.enable = true; # Rust
         tailwindcss.enable = true; # TailwindCSS
         tsserver.enable = true; # TS/JS
       };
