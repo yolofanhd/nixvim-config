@@ -29,7 +29,7 @@
         settings.telemetry.enable = false;
       };
       rust-analyzer = {
-        enable = true;
+        # enable = true; # disabled because of rustaceanvim
         installRustc = true;
         installCargo = true;
         settings = {
