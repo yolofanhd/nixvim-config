@@ -19,6 +19,7 @@
         pyright.enable = true; # Python
         tailwindcss.enable = true; # TailwindCSS
         tsserver.enable = true; # TS/JS
+        texlab.enable = true; # LaTex
       };
     };
 
