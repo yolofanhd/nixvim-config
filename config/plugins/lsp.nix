@@ -18,7 +18,7 @@
         nil-ls.enable = true; # Nix
         pyright.enable = true; # Python
         tailwindcss.enable = true; # TailwindCSS
-        tsserver.enable = true; # TS/JS
+        ts-ls.enable = true; # TS/JS
         texlab.enable = true; # LaTex
       };
     };
