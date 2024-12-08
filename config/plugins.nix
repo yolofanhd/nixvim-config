@@ -41,6 +41,7 @@ in
     trouble.enable = true;
     ts-autotag.enable = true;
     undotree.enable = true;
+    web-devicons.enable = true;
     which-key.enable = true;
   };
 
