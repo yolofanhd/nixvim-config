@@ -8,6 +8,7 @@
 
   colorschemes.gruvbox = {
     enable = true;
+    lazyLoad.enable = true;
     settings = {
       transparent_mode = true;
       terima_colors = true;
