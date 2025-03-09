@@ -23,7 +23,7 @@ in
   # Plugins used within a single line
   plugins = {
     commentary.enable = true;
-    crates-nvim.enable = true;
+    crates.enable = true;
     diffview.enable = true;
     flash.enable = true;
     floaterm.enable = true;

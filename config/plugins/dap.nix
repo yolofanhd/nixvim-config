@@ -16,20 +16,6 @@
           texthl = "DapLogPoint";
         };
       };
-      extensions = {
-        dap-python = {
-          enable = true;
-        };
-        dap-ui = {
-          enable = true;
-          floating.mappings = {
-            close = [ "<ESC>" "q" ];
-          };
-        };
-        dap-virtual-text = {
-          enable = true;
-        };
-      };
       configurations = {
         java = [
           {
@@ -40,6 +26,16 @@
             port = 5005;
           }
         ];
+      };
+    };
+    dap-python.enable = true;
+    dap-virtual-text.enable = true;
+    dap-ui = {
+      enable = true;
+      settings = {
+        floating.mappings = {
+          close = [ "<ESC>" "q" ];
+        };
       };
     };
   };
