@@ -18,6 +18,7 @@ in
     (prefix + /startup.nix)
     (prefix + /telescope.nix)
     (prefix + /todo-comments.nix)
+    (prefix + /vim-tex.nix)
   ];
 
   # Plugins used within a single line
@@ -31,6 +32,7 @@ in
     fugitive.enable = true;
     git-conflict.enable = true;
     lualine.enable = true;
+    lz-n.enable = true;
     neogen.enable = true;
     neotest.enable = true;
     nix.enable = true;
@@ -41,7 +43,6 @@ in
     trouble.enable = true;
     ts-autotag.enable = true;
     undotree.enable = true;
-    vimtex.enable = true;
     web-devicons.enable = true;
     which-key.enable = true;
   };
