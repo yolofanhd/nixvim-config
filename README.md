@@ -21,7 +21,7 @@ If you add a new configuration file, remember to add it to the
 
 To test your configuration simply run the following command
 
-```
+```bash
 nix run .
 ```
 
@@ -51,8 +51,17 @@ For more information look at: [NixOS docs](https://nixos.wiki/wiki/flakes)
 | n    | fb      | find buffers              |
 | n    | ft      | treesitter                |
 | n    | fg      | git commits               |
-| n    | fh      | file history              |
-| n    | fh      | file history              |
+| n    | fB      | git branches              |
+| n    | fo      | old files                 |
+| n    | fu      | undo history              |
+| n    | fd      | diagnostics               |
+| n    | fe      | todos                     |
+
+### Auto-Session
+
+| Mode | Keybind | Action        |
+| ---- | ------- | ------------- |
+| n    | fs      | View Sessions |
 
 ### LSP
 
@@ -62,7 +71,7 @@ For more information look at: [NixOS docs](https://nixos.wiki/wiki/flakes)
 | n    | gd      | go to definition      |
 | n    | gD      | go to declaration     |
 | n    | gi      | go to implementation  |
-| n    | go      | go to tyoe definition |
+| n    | go      | go to type definition |
 | n    | gr      | go to references      |
 | n    | gd      | go to definition      |
 | n    | \<F2\>  | rename                |
@@ -71,7 +80,7 @@ For more information look at: [NixOS docs](https://nixos.wiki/wiki/flakes)
 
 | Mode | Keybind | Action                        |
 | ---- | ------- | ----------------------------- |
-| n    | gl      | Show diagnostics in telescope |
+| n    | gl      | Show current line diagnostics |
 | n    | [d      | go to previous diagnostics    |
 | n    | ]d      | go to next diagnostics        |
 

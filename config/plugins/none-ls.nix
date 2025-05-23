@@ -19,6 +19,7 @@
         };
         formatting = {
           alejandra.enable = true;
+
           stylua.enable = true;
           shfmt.enable = true;
           nixpkgs_fmt.enable = true;
@@ -27,13 +28,15 @@
             enable = true;
             disableTsServerFormatter = true;
           };
-          black = {
+          clang_format = {
             enable = true;
-            settings = ''
-              {
-                extra_args = { "--fast" },
-              }
-            '';
+          };
+          black = {
+            settings = {
+              extra_args = [
+                "--fast"
+              ];
+            };
           };
         };
         completion = {
