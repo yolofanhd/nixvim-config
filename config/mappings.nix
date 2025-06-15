@@ -242,7 +242,7 @@
       key = "<C-h>";
       action = "<cmd>lua require('luasnip').jump(-1)<cr>";
       options = {
-        desc = "Jumps to previours luasnip variable";
+        desc = "Jumps to previous luasnip variable";
       };
     }
 
