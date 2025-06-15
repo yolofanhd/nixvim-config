@@ -38,5 +38,5 @@
   };
 
   clipboard.providers.wl-copy.enable = true;
-  performance.combinePlugins.enable = true;
+  performance.combinePlugins.enable = false;
 }

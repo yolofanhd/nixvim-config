@@ -228,6 +228,24 @@
       };
     }
 
+    # Luasnip bindings
+    {
+      mode = "i";
+      key = "<C-l>";
+      action = "<cmd>lua require('luasnip').jump(1)<cr>";
+      options = {
+        desc = "Jumps to next luasnip variable";
+      };
+    }
+    {
+      mode = "i";
+      key = "<C-h>";
+      action = "<cmd>lua require('luasnip').jump(-1)<cr>";
+      options = {
+        desc = "Jumps to previours luasnip variable";
+      };
+    }
+
     # Notify bindings
     {
       mode = "n";

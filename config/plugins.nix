@@ -6,6 +6,7 @@ in
   # Plugins with a little bit more configuration
   imports = [
     (prefix + /cmp.nix)
+    (prefix + /codecompanion.nix)
     (prefix + /dap.nix)
     (prefix + /gitsigns.nix)
     (prefix + /lint.nix)

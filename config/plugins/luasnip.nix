@@ -4,8 +4,19 @@
       enable = true;
       settings = {
         enable_autosnippets = true;
-        store_selection_keys = "<Tab>";
+        exit_roots = false;
+        keep_roots = true;
+        link_roots = true;
+        update_events = [
+          "TextChanged"
+          "TextChangedI"
+        ];
       };
+      fromLua = [
+        {
+          paths = "./../../snippets/rust.lua";
+        }
+      ];
     };
   };
 }

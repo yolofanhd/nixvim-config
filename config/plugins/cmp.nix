@@ -1,10 +1,12 @@
 {
   plugins = {
+    copilot-cmp.enable = true; # Enables lua-copilot and copilot cmp integration
     cmp-nvim-lsp.enable = true; # Enable suggestions for LSP
-    cmp-buffer.enable = true; # Enable suggestions for buffer in current file
     cmp-path.enable = true; # Enable suggestions for file system paths
     cmp_luasnip.enable = true; # Enable suggestions for code snippets
     cmp-cmdline.enable = false; # Enable autocomplete for command line
+    cmp-buffer.enable = true; # Enable suggestions for buffer in current file
+    cmp-nvim-lsp-signature-help.enable = true; # Enable signature help for LSP
 
     cmp = {
       enable = true;
@@ -27,19 +29,32 @@
           '';
         };
         snippet = {
-          expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-        };
-        sources = {
-          __raw = ''
-            cmp.config.sources({
-              { name = 'nvim_lsp' },
-              { name = 'vsnip' },
-              { name = 'luasnip' },
-            }, {
-              { name = 'buffer' },
-            })
+          expand = ''
+            function(args)
+              require('luasnip').lsp_expand(args.body)
+            end
           '';
         };
+        sources = [
+          {
+            name = "copilot";
+          }
+          {
+            name = "nvim_lsp";
+          }
+          {
+            name = "nvim_lsp_signature_help";
+          }
+          {
+            name = "luasnip";
+          }
+          {
+            name = "path";
+          }
+          {
+            name = "buffer";
+          }
+        ];
       };
     };
   };
