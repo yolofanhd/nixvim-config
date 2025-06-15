@@ -1,7 +1,7 @@
 {
   imports = [
     ./auto_cmd.nix
-    ./plugins.nix
+    ./plugins
     ./mappings.nix
     ./options.nix
   ];
