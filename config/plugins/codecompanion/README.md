@@ -1,6 +1,6 @@
 # Code Companion
 
-This plugin allows you to chat with your ai assistant withing `neovim`.
+This plugin allows you to chat with your ai assistant within `neovim`.
 Use :CodeCompanion Toggle to use the chat.
 
 ## Setup
