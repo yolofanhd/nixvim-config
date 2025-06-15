@@ -14,7 +14,7 @@
       };
       fromLua = [
         {
-          paths = "./../../snippets/rust.lua";
+          paths = "./snippets/rust.lua";
         }
       ];
     };

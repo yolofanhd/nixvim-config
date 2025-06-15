@@ -1,0 +1,21 @@
+{
+  imports = [
+    ./cmp
+    ./codecompanion
+    ./dap
+    ./gitsigns
+    ./lint
+    ./lsp
+    ./luasnip
+    ./markdown-preview
+    ./none-ls
+    ./notify
+    ./nvim-tree
+    ./startup
+    ./telescope
+    ./todo-comments
+    ./vim-tex
+    ./snacks
+    ./rustaceanvim
+  ];
+}

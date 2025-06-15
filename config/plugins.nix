@@ -1,29 +1,8 @@
 { pkgs, ... }:
-let
-  prefix = ./plugins;
-in
 {
   # Plugins with a little bit more configuration
-  imports = [
-    (prefix + /cmp.nix)
-    (prefix + /codecompanion.nix)
-    (prefix + /dap.nix)
-    (prefix + /gitsigns.nix)
-    (prefix + /lint.nix)
-    (prefix + /lsp.nix)
-    (prefix + /luasnip.nix)
-    (prefix + /markdown-preview.nix)
-    (prefix + /none-ls.nix)
-    (prefix + /notify.nix)
-    (prefix + /nvim-tree.nix)
-    (prefix + /startup.nix)
-    (prefix + /telescope.nix)
-    (prefix + /todo-comments.nix)
-    (prefix + /vim-tex.nix)
-    (prefix + /snacks.nix)
-    (prefix + /rustaceanvim.nix)
-  ];
-
+  imports = [ ./plugins ];
+  
   # Plugins used within a single line
   plugins = {
     auto-session.enable = true;
