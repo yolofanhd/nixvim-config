@@ -59,7 +59,7 @@
     cmdheight = 0;
 
     # Place a column line
-    colorcolumn = "80";
+    colorcolumn = "90";
 
     # Decrease updatetime
     updatetime = 50; # faster completion (4000ms default)
