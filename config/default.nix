@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ./auto_cmd.nix
@@ -39,4 +40,8 @@
 
   clipboard.providers.wl-copy.enable = true;
   performance.combinePlugins.enable = true;
+  performance.combinePlugins.standalonePlugins = [
+    pkgs.vimPlugins.snacks-nvim
+    pkgs.vimPlugins.markview-nvim
+  ];
 }

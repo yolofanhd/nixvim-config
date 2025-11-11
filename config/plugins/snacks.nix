@@ -13,6 +13,7 @@
         input.enabled = true;
         scope.enabled = true;
         quickfile.enabled = true;
+        words.enabled = true;
       };
     };
   };

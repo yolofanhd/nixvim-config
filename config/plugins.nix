@@ -11,7 +11,6 @@ in
     (prefix + /lint.nix)
     (prefix + /lsp.nix)
     (prefix + /luasnip.nix)
-    (prefix + /markdown-preview.nix)
     (prefix + /none-ls.nix)
     (prefix + /notify.nix)
     (prefix + /nvim-tree.nix)
@@ -41,7 +40,7 @@ in
     lz-n.enable = true;
     neogen = {
       enable = true;
-      languages = {
+      settings.languages = {
         c.template = {
           annotation_convention = "doxygen";
         };
