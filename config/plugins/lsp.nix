@@ -20,6 +20,7 @@
         tailwindcss.enable = true; # TailwindCSS
         ts_ls.enable = true; # TS/JS
         texlab.enable = true; # LaTex
+        verible.enable = true; # Verilog
       };
     };
 

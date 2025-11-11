@@ -51,7 +51,10 @@ in
     neotest.enable = true;
     nix.enable = true;
     nvim-autopairs.enable = true;
-    persistence.enable = true;
+    persistence = {
+      enable = true;
+      autoLoad = true;
+    };
     treesitter.enable = true;
     trouble.enable = true;
     ts-autotag.enable = true;
