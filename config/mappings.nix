@@ -56,7 +56,7 @@
     {
       mode = "n";
       key = "fB";
-      action = ''<cmd>lua Snacks.picker.git_branches()<cr>'';
+      action = "<cmd>lua Snacks.picker.git_branches()<cr>";
       options = {
         desc = "Find git branches";
       };
@@ -64,7 +64,7 @@
     {
       mode = "n";
       key = "fD";
-      action = ''<cmd>lua Snacks.picker.git_diff()<cr>'';
+      action = "<cmd>lua Snacks.picker.git_diff()<cr>";
       options = {
         desc = "Git Diff (Hunks)";
       };
