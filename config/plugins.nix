@@ -14,8 +14,6 @@ in
     (prefix + /none-ls.nix)
     (prefix + /notify.nix)
     (prefix + /nvim-tree.nix)
-    (prefix + /startup.nix)
-    (prefix + /telescope.nix)
     (prefix + /todo-comments.nix)
     (prefix + /vim-tex.nix)
     (prefix + /snacks.nix)
@@ -66,6 +64,5 @@ in
   # Plugins not contained within nixvim
   extraPlugins = with pkgs.vimPlugins; [
     clipboard-image-nvim
-    nvim-web-devicons
   ];
 }

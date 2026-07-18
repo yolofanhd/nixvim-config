@@ -1,16 +1,24 @@
-name: Conventional Commits
+name: Conventional pull request title
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
 
 jobs:
-  build:
-    name: Conventional Commits
+  validate-title:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.7
-
-      - uses: gentleseal/action-conventional-commits@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Validate title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          pattern='^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([[:alnum:]_.\/-]+\))?(!)?:[[:space:]].+'
+          if [[ ! "$PR_TITLE" =~ $pattern ]]; then
+            echo "Pull request title does not follow Conventional Commits:"
+            echo "$PR_TITLE"
+            exit 1
+          fi

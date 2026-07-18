@@ -1,7 +1,9 @@
-{ lib
-, pkgs
-, ...
-}: {
+{
+  lib,
+  pkgs,
+  ...
+}:
+{
   # Needed for RustPlay
   extraPlugins = with pkgs.vimPlugins; [ webapi-vim ];
 

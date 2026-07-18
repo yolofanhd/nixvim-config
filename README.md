@@ -1,96 +1,87 @@
 # Nixvim
 
-My nixvim configuration
+A standalone, flake-based Nixvim configuration for Linux and macOS.
 
 ## Usage
 
-This configuration is currently hardcoded to the home-manager configurations and can be used from there.
-Just simply run any `neovim` command.
-
-```bash
-nvim .
-```
-
-## Configuring
-
-To start configuring, just add or modify the nix files in `./config`.
-If you add a new configuration file, remember to add it to the
-[`config/default.nix`](./config/default.nix) file
-
-## Testing your new configuration
-
-To test your configuration simply run the following command
+Run the configured Neovim directly:
 
 ```bash
 nix run .
 ```
 
-## Updating
+Enter the development shell to get the repository's formatter and static-analysis
+tools:
 
 ```bash
-sudo nix flake update
+nix develop
 ```
 
-For more information look at: [NixOS docs](https://nixos.wiki/wiki/flakes)
+## Development
 
-## Keybinds
+Configuration lives under `config/`. Core editor behavior is split between
+`options.nix`, `mappings.nix`, and `auto_cmd.nix`; plugin modules live under
+`config/plugins/` and are imported by `config/plugins.nix`.
 
-| Mode | Keybind | Action |
-| ---- | ------- | ------ |
-| n    | h       | left   |
-| n    | j       | down   |
-| n    | k       | up     |
-| n    | l       | right  |
+Format and validate changes before opening a pull request:
 
-### Telescope
+```bash
+nix fmt
+nix flake check
+```
 
-| Mode | Keybind | Action                    |
-| ---- | ------- | ------------------------- |
-| n    | ff      | find files                |
-| n    | fw      | live grep (find in files) |
-| n    | fb      | find buffers              |
-| n    | ft      | treesitter                |
-| n    | fg      | git commits               |
-| n    | fB      | git branches              |
-| n    | fo      | old files                 |
-| n    | fu      | undo history              |
-| n    | fd      | diagnostics               |
-| n    | fe      | todos                     |
+The flake checks the generated Nixvim configuration, Nix formatting, static Nix
+analysis, and GitHub Actions workflows.
 
-### Auto-Session
+Update pinned flake inputs with:
 
-| Mode | Keybind | Action        |
-| ---- | ------- | ------------- |
-| n    | fs      | View Sessions |
+```bash
+nix flake update
+```
 
-### LSP
+## Key bindings
 
-| Mode | Keybind | Action                |
-| ---- | ------- | --------------------- |
-| n    | K       | hover action          |
-| n    | gd      | go to definition      |
-| n    | gD      | go to declaration     |
-| n    | gi      | go to implementation  |
-| n    | go      | go to type definition |
-| n    | gr      | go to references      |
-| n    | gd      | go to definition      |
-| n    | \<F2\>  | rename                |
+The map leader is the backtick key.
 
-### Diagnostics
+### Files and search
 
-| Mode | Keybind | Action                        |
-| ---- | ------- | ----------------------------- |
-| n    | gl      | Show current line diagnostics |
-| n    | [d      | go to previous diagnostics    |
-| n    | ]d      | go to next diagnostics        |
+| Mode | Key | Action |
+| --- | --- | --- |
+| Normal | `n` | Toggle NvimTree |
+| Normal | `ff` | Smart file search |
+| Normal | `fw` | Search file contents |
+| Normal | `fb` | List buffers |
+| Normal | `fg` | List Git commits |
+| Normal | `fB` | List Git branches |
+| Normal | `fD` | View Git diff |
+| Normal | `fo` | Open recent files |
+| Normal | `fu` | Browse undo history |
+| Normal | `fd` | Browse diagnostics |
+| Normal | `fe` | Browse TODO comments |
+| Normal | `fs` | Search sessions |
 
-### Notifications
+### LSP and diagnostics
 
-| Mode | Keybind | Action                    |
-| ---- | ------- | ------------------------- |
-| n    | dn      | Dismiss all notifications |
+| Mode | Key | Action |
+| --- | --- | --- |
+| Normal | `K` | Show hover information |
+| Normal | `gd` | Go to definition |
+| Normal | `gD` | Go to declaration |
+| Normal | `gi` | Go to implementation |
+| Normal | `go` | Go to type definition |
+| Normal | `gr` | List references |
+| Normal | `gs` | Show signature help |
+| Normal | `gl` | Show line diagnostics |
+| Normal | `[d` / `]d` | Previous / next diagnostic |
+| Normal | `F2` | Rename symbol |
+| Normal / Visual | `F4` | Code action |
 
-## Usefull vim commands
+### Other
 
-Substitutes all word1's with word2's\
-`v` -> Select -> `:s/<word1>/<word2>`\
+| Mode | Key | Action |
+| --- | --- | --- |
+| Normal | `cl` | Toggle comment |
+| Normal | `t` | Toggle floating terminal |
+| Terminal | `Esc` | Close floating terminal |
+| Normal | `dn` | Dismiss notifications |
+| Normal | `` `du `` | Toggle debugger UI |

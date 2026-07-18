@@ -9,7 +9,6 @@
       servers = {
         bashls.enable = true; # Bash
         clangd.enable = true; # C/C++
-        csharp_ls.enable = true; # C#
         cssls.enable = true; # CSS
         dockerls.enable = true; # Docker
         gopls.enable = true; # Go
@@ -20,7 +19,6 @@
         tailwindcss.enable = true; # TailwindCSS
         ts_ls.enable = true; # TS/JS
         texlab.enable = true; # LaTex
-        verible.enable = true; # Verilog
       };
     };
 

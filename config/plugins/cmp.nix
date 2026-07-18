@@ -31,12 +31,11 @@
         };
         sources = {
           __raw = ''
-            cmp.config.sources({
-              { name = 'nvim_lsp' },
-              { name = 'vsnip' },
-              { name = 'luasnip' },
-            }, {
-              { name = 'buffer' },
+              cmp.config.sources({
+                { name = 'nvim_lsp' },
+                { name = 'luasnip' },
+              }, {
+                { name = 'buffer' },
             })
           '';
         };

@@ -56,7 +56,10 @@
       };
       settings = {
         floating.mappings = {
-          close = [ "<ESC>" "q" ];
+          close = [
+            "<ESC>"
+            "q"
+          ];
         };
       };
     };

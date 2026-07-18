@@ -38,7 +38,10 @@
     };
   };
 
-  clipboard.providers.wl-copy.enable = true;
+  clipboard.providers = {
+    wl-copy.enable = pkgs.stdenv.hostPlatform.isLinux;
+    pbcopy.enable = pkgs.stdenv.hostPlatform.isDarwin;
+  };
   performance.combinePlugins.enable = true;
   performance.combinePlugins.standalonePlugins = [
     pkgs.vimPlugins.snacks-nvim
