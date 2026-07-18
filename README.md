@@ -1,5 +1,12 @@
 <div align="center">
-  <img src="./assets/nixvim_logo.svg" alt="nixvim logo" width="100%">
+  <h2 align="center">
+    <picture>
+      <img src="assets/nixvim_logo.svg" width="25%" />
+    </picture>
+  
+    <a href="https://nix-community.github.io/nixvim">Documentation</a> |
+    <a href="https://matrix.to/#/#nixvim:matrix.org">Chat</a>
+  </h2>
 
   <h1>Nixvim Config</h1>
 
