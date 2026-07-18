@@ -3,7 +3,7 @@
     nvim-tree = {
       enable = true;
       settings = {
-        autoReloadOnWrite = true;
+        auto_reload_on_write = true;
         diagnostics.enable = true;
       };
     };
