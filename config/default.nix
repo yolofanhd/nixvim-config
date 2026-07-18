@@ -44,6 +44,7 @@
   };
   performance.combinePlugins.enable = true;
   performance.combinePlugins.standalonePlugins = [
+    pkgs.vimPlugins.friendly-snippets
     pkgs.vimPlugins.snacks-nvim
     pkgs.vimPlugins.markview-nvim
   ];

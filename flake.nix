@@ -14,6 +14,7 @@
   outputs =
     {
       nixvim,
+      nixpkgs,
       flake-parts,
       ...
     }@inputs:
@@ -28,11 +29,14 @@
       perSystem =
         {
           lib,
-          pkgs,
           system,
           ...
         }:
         let
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfreePredicate = pkg: lib.getName pkg == "git-conflict.nvim";
+          };
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
@@ -44,7 +48,7 @@
             name = "nixvim-format";
             runtimeInputs = [
               pkgs.fd
-              pkgs.nixfmt-rfc-style
+              pkgs.nixfmt
             ];
             text = ''
               if (( $# == 0 )); then
@@ -65,7 +69,7 @@
                 {
                   nativeBuildInputs = [
                     pkgs.fd
-                    pkgs.nixfmt-rfc-style
+                    pkgs.nixfmt
                   ];
                   src = ./.;
                 }
@@ -94,7 +98,7 @@
               actionlint
               deadnix
               fd
-              nixfmt-rfc-style
+              nixfmt
               statix
             ];
           };
